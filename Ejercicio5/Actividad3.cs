@@ -8,7 +8,7 @@ namespace Ejercicio5
 {
     class Actividad3
     {
-        public static void Main3(string[] args)
+        public static void Main(string[] args)
         {
             CuentaMayor cuentita = new CuentaMayor(222, "tobias", 1000, "activa", 8);
             cuentita.mostrarCuenta();

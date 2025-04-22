@@ -21,13 +21,29 @@ namespace Ejercicio5
             public string? email;
             public int dni;
             public int sueldo;
-            
+
+            public Empleado(string? nombre, string? telefono, string? email, int dni, int sueldo)
+            {
+                this.nombre = nombre;
+                this.telefono = telefono;
+                this.email = email;
+                this.dni = dni;
+                this.sueldo = sueldo;
+            }
         }
         public class Programador: Empleado
         {
             public string? lenguaje;
             public string? tipoDesarrollador;
             public int produccion;
+
+            public Programador(string? nombre, string? telefono, string? email, int dni, int sueldo, string? lenguaje, string? tipoDesarrollador, int produccion) : base(nombre, telefono, email, dni,sueldo)
+            {
+                this.lenguaje = lenguaje;
+                this.tipoDesarrollador = tipoDesarrollador ;
+                this.produccion = produccion;
+
+            }
             public void mostrarInfo()
             {
                 Console.WriteLine($"El nombre del empleadoes: {nombre}");
@@ -35,6 +51,9 @@ namespace Ejercicio5
                 Console.WriteLine($"El email del empleado es: {email}");
                 Console.WriteLine($"El dnai del empleado es: {dni}");
                 Console.WriteLine($"El sueldo del empleado es: {sueldo}");
+                Console.WriteLine($"El lenguaje es: {lenguaje}");
+                Console.WriteLine($"El tipo de desarrollador es: {tipoDesarrollador}");
+                Console.WriteLine($"Está en producción: {produccion}");
             }
         }
         public class DptoSistema
